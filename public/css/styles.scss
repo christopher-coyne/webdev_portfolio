@@ -1,0 +1,36 @@
+$primary: #243b4a;
+$secondary: #355364;
+$tertiary: #ffa62b;
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+nav {
+  background-color: #ffa62b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: right;
+}
+
+.nav__link {
+  color: white;
+}
+
+.navbar {
+  background-color: $tertiary;
+  display: flex;
+}

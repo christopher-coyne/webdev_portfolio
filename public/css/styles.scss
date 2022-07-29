@@ -1,18 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather:ital,wght@1,300&family=Nunito:wght@400;600;700&display=swap");
-
-// colors
-$primary: #243b4a;
-$primary-lighter: #355364;
-$primary-lightest: #355364;
-$secondary: #ffa62b;
-
-// font weights
-$bold: 700;
-$semi-bold: 600;
-$regular: 400;
-
-// font sizes: todo
-$larger: 1.875rem;
+@import "./variables.scss";
 
 body {
   background-color: $primary;
@@ -52,10 +39,11 @@ h2 {
   padding: 1rem;
   display: inline-block;
   font-size: $larger;
+  color: $primary-lightest;
 }
 
 #content {
-  width: 50%;
+  width: 60%;
   border: 2px solid yellow;
   margin: auto;
 }
@@ -91,7 +79,7 @@ h2 {
   }
 }
 
-.bigproject {
+.big-project__project {
   display: flex;
   justify-content: space-between;
   padding-right: 1rem;
@@ -110,4 +98,39 @@ h2 {
   border: 2px solid red;
   flex: 0 0 70%;
   background-color: black;
+}
+
+#tech-skills {
+  color: $secondary;
+}
+
+.skills {
+  ul {
+    list-style-type: none;
+    display: inline-block;
+    li {
+      display: inline-block;
+      color: $secondary;
+    }
+  }
+}
+
+#small-project__all-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  .small-project__project {
+    border: 3px solid orange;
+  }
+}
+
+#quote {
+  font-family: "Merriweather";
+  font-style: italic;
+  display: inline-block;
+  width: 90%;
+  background-color: $primary-lighter;
+  display: relative;
+  padding: 1rem;
+  font-size: 30px;
 }

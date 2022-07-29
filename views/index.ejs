@@ -41,34 +41,79 @@
             <a href="www.google.com" class="secondary-text">Pyyne Digital</a>.
           </p>
           <h3>Some technologies I've been using recently...</h3>
-          <ul>
-            <p>Languages: Javascript, HTML/CSS, Python, Typescript</p>
-            <p>Frameworks And Libraries: React, Tailwind CSS, Jest, Redux</p>
-            <p>FPlatforms: Amazon Web Services, Docker, Linux</p>
+          <ul id="tech-skills">
+            <li id="languages" class="skills">
+              <img src="bulletpoint.svg" />
+              Languages:
+              <ul class="secondary-text">
+                <li>Javascript</li>
+                <li>HTML/CSS</li>
+                <li>Python</li>
+                <li>Typescript</li>
+              </ul>
+            </li>
+            <li id="frameworks" class="skills">
+              <img src="bulletpoint.svg" />
+              Frameworks And Libraries:
+              <ul class="secondary-text">
+                <li>React</li>
+                <li>Tailwind CSS</li>
+                <li>Jest Redux</li>
+              </ul>
+            </li>
+            <li id="platforms" class="skills">
+              <img src="bulletpoint.svg" />
+              Platforms:
+              <ul class="secondary-text">
+                <li>Amazon Web Services</li>
+                <li>Docker</li>
+                <li>Linux</li>
+              </ul>
+            </li>
           </ul>
         </article>
       </section>
-      <section id="bigprojects">
+      <section id="big-project">
         <h2>Projects</h2>
         <hr class="main-break" />
-        <article class="bigproject">
+        <% for (const proj of pageData.bigProjects) { %>
+        <article class="big-project__project">
           <div class="video">placeholder for video</div>
           <section>
-            <h3>Professor Review Site</h3>
-            <p>
-              Professor and course review site for Columbia university. Users
-              can view 1000s of real, scraped reviews and submit their own. Data
-              visualized using ChartJS.
-            </p>
+            <h3><%= proj.name %></h3>
+            <p><%= proj.shortDescription %></p>
             <ul>
-              <li>React</li>
-              <li>Docker</li>
-              <li>Node JS</li>
-              <li>PostgreSQL</li>
-              <li>Beautiful Soup</li>
+              <% for (const skill of proj.skills) { %>
+              <li><%= skill %></li>
+              <% } %>
             </ul>
           </section>
         </article>
+        <% } %>
+      </section>
+      <section id="small-project">
+        <h2>Small Things</h2>
+        <hr class="main-break" />
+        <h3>
+          Small projects that were too simple to put with the others. Edifying
+          nonetheless.
+        </h3>
+        <section id="small-project__all-projects">
+          <% for (const proj of pageData.smallProjects) { %>
+          <article class="small-project__project">
+            <div><%= proj.name %></div>
+            <div><%= proj.shortDescription %></div>
+          </article>
+          <% } %>
+        </section>
+      </section>
+      <section id="small-project">
+        <h2>Art and Computer Science</h2>
+        <hr class="main-break" />
+        <p id="quote">
+          “I have always imagined that Paradise will be a kind of library”
+        </p>
+        <p><%- pageData.artBlurb %></p>
       </section>
     </section>
   </body>

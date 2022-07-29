@@ -1,0 +1,65 @@
+{
+  "artBlurb": "During my education, one of the most influential classes I took was “Literature in the Age of AI” taught by professor Dennis Tenen. My eyes were opened to the ways that computer science, philosophy, and <span class='secondary-text'>art could intermix</span>, and I wanted to contribute in my own way. Above all, I want to make something unique and unashamed of being modern.",
+  "bigProjects": [
+    {
+      "name": "Professor Review Site",
+      "links": [
+        {
+          "type": "Github",
+          "link": "www.google.com"
+        },
+        {
+          "type": "Live Site",
+          "link": "www.google.com"
+        }
+      ],
+      "shortDescription": "Professor and course review site for Columbia university. Users can view 1000s of real, scraped reviews and submit their own. Data visualized using ChartJS.",
+      "skills": ["React", "Docker", "Node JS", "PostgreSQL", "Beautiful Soup"],
+      "videoLink": "www.google.com"
+    }
+  ],
+  "smallProjects": [
+    {
+      "name": "Recipe Finder",
+      "shortDescription": "Frontend app that lets users search for recipes and add their own. Created with Typescript and Styled Components. Integration tests written with Jest.",
+      "links": [
+        {
+          "type": "Github",
+          "link": "www.google.com"
+        },
+        {
+          "type": "Live Site",
+          "link": "www.google.com"
+        }
+      ]
+    },
+    {
+      "name": "To Do List",
+      "shortDescription": "Even a mighty oak must grow from a small seed. Simple frontend project in vanilla javascript.",
+      "links": [
+        {
+          "type": "Github",
+          "link": "www.google.com"
+        },
+        {
+          "type": "Live Site",
+          "link": "www.google.com"
+        }
+      ]
+    },
+    {
+      "name": "To Do List",
+      "shortDescription": "Even a mighty oak must grow from a small seed. Simple frontend project in vanilla javascript.",
+      "links": [
+        {
+          "type": "Github",
+          "link": "www.google.com"
+        },
+        {
+          "type": "Live Site",
+          "link": "www.google.com"
+        }
+      ]
+    }
+  ]
+}

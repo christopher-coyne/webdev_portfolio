@@ -79,12 +79,14 @@
         <% for (const proj of pageData.bigProjects) { %>
         <article class="big-project__project">
           <div class="video">placeholder for video</div>
-          <section>
-            <h3><%= proj.name %></h3>
-            <p><%= proj.shortDescription %></p>
+          <section class="big-project__blurb">
+            <article class="big-project__description">
+              <h3><%= proj.name %></h3>
+              <p><%= proj.shortDescription %></p>
+            </article>
             <ul>
               <% for (const skill of proj.skills) { %>
-              <li><%= skill %></li>
+              <li class="secondary-text"><%= skill %></li>
               <% } %>
             </ul>
           </section>
@@ -101,13 +103,24 @@
         <section id="small-project__all-projects">
           <% for (const proj of pageData.smallProjects) { %>
           <article class="small-project__project">
-            <div><%= proj.name %></div>
-            <div><%= proj.shortDescription %></div>
+            <div>
+              <h3><%= proj.name %></h3>
+              <hr />
+              <p class="description"><%- proj.shortDescription %></p>
+            </div>
+            <ul>
+              <% for (const link of proj.links) { %>
+              <li>
+                <a href="<%= link.link %>"> <%= link.type %></a>
+              </li>
+              <% } %>
+            </ul>
           </article>
           <% } %>
         </section>
+        <button class="btn btn--light-outline">View All</button>
       </section>
-      <section id="small-project">
+      <section id="art">
         <h2>Art and Computer Science</h2>
         <hr class="main-break" />
         <p id="quote">

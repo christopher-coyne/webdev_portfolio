@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href='styles.css'
   </head>
+  <script
+    src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"
+    defer
+  ></script>
+  <script src="./scripts.js" defer></script>
   <body>
     <nav>
       <ul>
@@ -78,7 +83,9 @@
         <hr class="main-break" />
         <% for (const proj of pageData.bigProjects) { %>
         <article class="big-project__project">
-          <div class="video">placeholder for video</div>
+          <div class="video">
+            <img src="./videos/screenrec_test.gif" class="freezeframe" />
+          </div>
           <section class="big-project__blurb">
             <article class="big-project__description">
               <h3><%= proj.name %></h3>
@@ -133,5 +140,6 @@
         </article>
       </section>
     </section>
+    <section id="movie-test"></section>
   </body>
 </html>

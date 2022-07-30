@@ -1,5 +1,8 @@
 {
-  "artBlurb": "During my education, one of the most influential classes I took was “Literature in the Age of AI” taught by professor Dennis Tenen. My eyes were opened to the ways that computer science, philosophy, and <span class='secondary-text'>art could intermix</span>, and I wanted to contribute in my own way. Above all, I want to make something unique and unashamed of being modern.",
+  "artBlurb": [
+    "During my education, one of the most influential classes I took was “Literature in the Age of AI” taught by professor <a href='www.google.com' class='secondary-text'>Dennis Tenen</a>,. My eyes were opened to the ways that computer science, philosophy, and art could intermix and I wanted to contribute in my own way.",
+    "Above all, I want to make something unique and unashamed of being modern."
+  ],
   "bigProjects": [
     {
       "name": "Professor Review Site",
@@ -15,6 +18,22 @@
       ],
       "shortDescription": "Professor and course review site for Columbia university. Users can view 1000s of real, scraped reviews and submit their own. Data visualized using ChartJS.",
       "skills": ["React", "Docker", "Node JS", "PostgreSQL", "Beautiful Soup"],
+      "videoLink": "www.google.com"
+    },
+    {
+      "name": "IMDB Chatbot",
+      "links": [
+        {
+          "type": "Github",
+          "link": "www.google.com"
+        },
+        {
+          "type": "Live Site",
+          "link": "www.google.com"
+        }
+      ],
+      "shortDescription": "Chatbot powered by AWS services that recommends top movies from IMDB. Implemented with a CICD pipeline and AWS serverless design.",
+      "skills": ["React", "Tailwind CSS", "AWS", "DynamoDB", "Pytest"],
       "videoLink": "www.google.com"
     }
   ],

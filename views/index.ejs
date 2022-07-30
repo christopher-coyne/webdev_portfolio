@@ -123,10 +123,14 @@
       <section id="art">
         <h2>Art and Computer Science</h2>
         <hr class="main-break" />
-        <p id="quote">
-          “I have always imagined that Paradise will be a kind of library”
-        </p>
-        <p><%- pageData.artBlurb %></p>
+        <article>
+          <div id="quote">
+            “I have always imagined that Paradise will be a kind of library”
+          </div>
+          <% for (const line of pageData.artBlurb) { %>
+          <p><%- line %></p>
+          <% } %>
+        </article>
       </section>
     </section>
   </body>

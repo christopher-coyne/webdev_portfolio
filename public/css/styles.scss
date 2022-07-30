@@ -3,7 +3,12 @@
 
 body {
   background-color: $primary;
+  section {
+    margin-bottom: 2rem;
+  }
 }
+
+// General Element Styling
 
 * {
   box-sizing: border-box;
@@ -30,6 +35,16 @@ a:active {
   background-color: white;
 }
 
+// Main container for content
+#content {
+  width: 60%;
+  border: 2px solid yellow;
+  margin: auto;
+}
+
+// Section styling -------------------------->
+
+// Navbar styling
 nav {
   background-color: $secondary;
   display: -webkit-box;
@@ -37,22 +52,44 @@ nav {
   display: flex;
   justify-content: right;
   padding: 1rem;
+  .nav__link {
+    color: white;
+  }
+}
+
+#about {
+  article {
+    font-size: $large;
+    h3 {
+      font-weight: $bold;
+      font-size: $large;
+    }
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+#tech-skills {
+  li {
+    ul {
+      margin-left: 20px;
+      li {
+        margin-right: 20px;
+      }
+    }
+  }
+  color: $secondary;
 }
 
 h2 {
   font-family: "Inconsolata";
   background-color: $primary-lighter;
-  padding: 0.5rem;
-  padding: 1rem;
+  padding: 0.75rem;
   display: inline-block;
   font-size: $larger;
+  font-weight: $regular;
   color: $primary-lightest;
-}
-
-#content {
-  width: 60%;
-  border: 2px solid yellow;
-  margin: auto;
 }
 
 .main-break {
@@ -60,15 +97,7 @@ h2 {
   height: 5px;
   background-color: $primary-lighter;
   border: none;
-}
-
-.nav__link {
-  color: white;
-}
-
-.navbar {
-  background-color: $secondary;
-  display: flex;
+  margin-bottom: 2rem;
 }
 
 #herocontainer {
@@ -76,33 +105,32 @@ h2 {
   border: 1px solid red;
 }
 
-#about {
-  article {
-    font-size: 1.5rem;
-    h3 {
-      font-weight: $bold;
-      font-size: 1.5rem;
-    }
-  }
-}
-
 .big-project__project {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
-  padding-right: 30px;
-  section {
+  gap: 1rem;
+  padding-right: 2rem;
+  margin-bottom: 1rem;
+  .big-project__blurb {
     flex: 1 0 30%;
     position: relative;
+    font-size: $small;
     .big-project__description {
-      padding: 1rem;
+      h3 {
+        font-family: "Inconsolata";
+        font-size: $large;
+        margin-bottom: 0.5rem;
+        color: $primary-lightest;
+      }
+      padding: 1.5rem;
       background-color: $primary-lighter;
     }
     ul {
       margin-top: 1rem;
-      padding: 1rem;
+      padding: 0rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
       background-color: $primary-lighter;
       li {
+        margin-top: 1rem;
         display: inline-block;
         margin-right: 1rem;
       }
@@ -121,13 +149,6 @@ h2 {
   bottom: -1.3rem;
 }
 
-.big-project__border {
-  padding: 10px;
-  border: 4px solid orange;
-  background-color: orange;
-  position: relative;
-}
-
 .secondary-text {
   color: $secondary;
 }
@@ -137,10 +158,6 @@ h2 {
   width: 500px;
   border: 2px solid red;
   background-color: black;
-}
-
-#tech-skills {
-  color: $secondary;
 }
 
 .skills {
@@ -171,7 +188,7 @@ h2 {
       font-weight: $semi-bold;
     }
     hr {
-      height: 5px;
+      height: 3px;
       background-color: $primary-lightest;
       border: none;
     }
@@ -179,6 +196,7 @@ h2 {
       font-size: 18px;
     }
     ul {
+      // links
       text-align: right;
       li {
         display: inline-block;
@@ -188,13 +206,25 @@ h2 {
   }
 }
 
-#quote {
-  font-family: "Merriweather";
-  font-style: italic;
-  display: inline-block;
-  width: 90%;
-  background-color: $primary-lighter;
-  display: relative;
-  padding: 1rem;
-  font-size: 30px;
+#art {
+  article {
+    padding: 1rem;
+    #quote {
+      font-family: "Merriweather";
+      font-style: italic;
+      display: inline-block;
+      font-weight: $light;
+      width: 95%;
+      background-color: $primary-lighter;
+      display: relative;
+      padding: 2rem;
+      font-size: 30px;
+      box-shadow: 20px 20px 1px 1px $primary-lightest;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: $large;
+      margin-bottom: 1rem;
+    }
+  }
 }

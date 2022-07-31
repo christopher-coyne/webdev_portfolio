@@ -17,11 +17,11 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  color: white;
 }
 
 body {
   font-family: nunito;
+  color: white;
 }
 
 button {
@@ -40,13 +40,16 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
+  color: white;
 }
 
 // Main container for content
+// 63% for width
 #content {
-  width: 63%;
+  max-width: 950px;
   border: 2px solid yellow;
   margin: auto;
+  min-width: 800px;
 }
 
 // Section styling -------------------------->
@@ -136,14 +139,17 @@ h2 {
       padding: 1.5rem;
       background-color: $primary-lighter;
     }
+    // links
     ul {
       margin-top: 1rem;
-      padding: 0rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
+      padding: 0.5rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
       background-color: $primary-lighter;
+      font-weight: $semi-bold;
+      color: green;
       li {
-        margin-top: 1rem;
+        margin-top: 0.5rem;
         display: inline-block;
-        margin-right: 1rem;
+        margin-right: 1.75rem;
       }
     }
   }
@@ -165,10 +171,15 @@ h2 {
 }
 
 .video {
-  background-color: black;
-  height: 250px;
+}
+
+video {
   width: 500px;
   cursor: pointer;
+}
+
+video:hover {
+  box-shadow: 5px 5px 5px 5px black;
 }
 
 /*
@@ -205,26 +216,33 @@ video {
     flex-direction: column;
     justify-content: space-between;
     background-color: $primary-lighter;
-    padding: 1rem;
-    height: 200px;
+    padding: 1.5rem;
     h3 {
       font-family: Inconsolata;
       font-size: 24px;
       font-weight: $semi-bold;
+      color: $primary-lightest;
     }
     hr {
-      height: 3px;
+      height: 2px;
       background-color: $primary-lightest;
       border: none;
+      margin: 0.5rem 0rem;
     }
     .description {
-      font-size: 18px;
+      font-size: $regular;
     }
     ul {
+      margin-top: 2rem;
       // links
       text-align: right;
       li {
         display: inline-block;
+        font-size: $large;
+        font-family: "Inconsolata";
+        font-weight: $semi-bold;
+        margin-left: 1rem;
+        color: $primary-dark;
       }
       flex-direction: row;
     }
@@ -266,6 +284,7 @@ video {
     .art__pic {
       width: 500px;
       height: 300px;
+      background-color: darkgray;
     }
     .art__blurb {
       background-color: $primary-lighter;
@@ -306,4 +325,47 @@ video {
   text-align: center;
   border: 3px solid $primary-lightest;
   padding: 5rem;
+}
+
+/* Mid sized breakpoints */
+@media only screen and (max-width: 1000px) {
+  video {
+    width: 100%;
+    margin: auto;
+  }
+  .video {
+    background-color: darkgreen;
+  }
+  .big-project {
+    text-align: center;
+  }
+  #content {
+    border: 3px solid red;
+    min-width: 100px;
+    width: 90%;
+  }
+  .big-project__project {
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+  /* same as before media query. change?? */
+  .big-project__blurb::after {
+    left: 1.3rem;
+    bottom: -1.3rem;
+  }
+  .big-project__blurb {
+    display: flex;
+    flex-direction: row;
+    gap: 0rem;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0px;
+    .big-project__description {
+      margin: 0px;
+      padding: 0px;
+    }
+    .big-project__links {
+      margin-top: 0px !important;
+    }
+  }
 }

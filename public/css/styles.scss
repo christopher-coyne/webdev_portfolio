@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather:ital,wght@1,300&family=Nunito:wght@400;600;700&display=swap");
 @import "./variables.scss";
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: $primary;
   section {
@@ -37,7 +40,7 @@ a:active {
 
 // Main container for content
 #content {
-  width: 60%;
+  width: 63%;
   border: 2px solid yellow;
   margin: auto;
 }
@@ -46,19 +49,22 @@ a:active {
 
 // Navbar styling
 nav {
-  background-color: $secondary;
+  background-color: #814c00;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-content: right;
-  padding: 1rem;
+  padding: 0.75rem 4rem;
   .nav__link {
     color: white;
+    font-size: $regular;
+    margin-right: 2rem;
   }
 }
 
 #about {
   article {
+    padding: 0rem 1rem;
     font-size: $large;
     h3 {
       font-weight: $bold;
@@ -114,7 +120,7 @@ h2 {
   .big-project__blurb {
     flex: 1 0 30%;
     position: relative;
-    font-size: $small;
+    font-size: $regular;
     .big-project__description {
       h3 {
         font-family: "Inconsolata";
@@ -154,13 +160,23 @@ h2 {
 }
 
 .video {
-  height: 250px;
   background-color: black;
+  height: 250px;
   width: 500px;
-  img {
-    width: 500px;
-    border: 2px solid red;
-  }
+}
+
+/*
+video {
+  width: 1000px;
+}
+*/
+
+.img-container {
+  text-align: center;
+}
+
+#celtic {
+  width: 200px;
 }
 
 .skills {

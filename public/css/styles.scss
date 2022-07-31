@@ -154,7 +154,13 @@ h2 {
 }
 
 .video {
+  height: 250px;
+  background-color: black;
   width: 500px;
+  img {
+    width: 500px;
+    border: 2px solid red;
+  }
 }
 
 .skills {

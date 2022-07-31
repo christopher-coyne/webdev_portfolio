@@ -14,16 +14,16 @@
   <body>
     <nav>
       <ul>
-        <li><a class="nav__link" href="/">About</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
       </ul>
       <ul>
-        <li><a class="nav__link" href="/">Projects</a></li>
+        <li><a class="nav__link" href="#big-project">Projects</a></li>
       </ul>
       <ul>
-        <li><a class="nav__link" href="/">Artwork</a></li>
+        <li><a class="nav__link" href="#art">Artwork</a></li>
       </ul>
       <ul>
-        <li><a class="nav__link" href="/">Contact</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <section id="herocontainer">hello world, placeholder</section>
@@ -89,7 +89,6 @@
             <video
               class="clip"
               width="500"
-              height="250"
               src="./videos/resizedmp4.mp4"
               type="mp4"
               loop
@@ -148,9 +147,15 @@
           <p><%- line %></p>
           <% } %>
         </article>
+        <div class='img-container'>
+        <img id='celtic' src="Celtic-knot-basic.svg"></img>
+    </div>
+      </section>
+      <section id="contact">
+        <h3>Like my work? Want to collaborate?</h3>
+        <button class="btn">Contact Me</button>
       </section>
     </section>
-    <section id="movie-test"></section>
   </body>
 </html>
 

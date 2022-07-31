@@ -149,11 +149,22 @@
         </article>
         <div class='img-container'>
         <img id='celtic' src="Celtic-knot-basic.svg"></img>
-    </div>
+        </div>
+        <section id='art-project'>
+            <% for (const proj of pageData.artProjects) { %>
+                <section class="art-project__project">
+                  <div class='art__pic'>placeholder</div>
+                  <article class='art__blurb'>
+                    <h3><%= proj.name %></h3>
+                    <p><%= proj.shortDescription %></p>
+                  </article>
+                </section>
+            <% } %>
+            </section>
       </section>
       <section id="contact">
         <h3>Like my work? Want to collaborate?</h3>
-        <button class="btn">Contact Me</button>
+        <button class="btn btn-outline btn-large">Contact Me</button>
       </section>
     </section>
   </body>

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather:ital,wght@1,300&family=Nunito:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather:ital,wght@0,400;0,700;1,300&family=Nunito:wght@400;600;700&display=swap");
 @import "./variables.scss";
 
 html {
@@ -17,9 +17,18 @@ body {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: "Nunito", Times, sans-serif;
   color: white;
 }
+
+body {
+  font-family: nunito;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -33,11 +42,6 @@ a:active {
   text-decoration: none;
 }
 
-.btn {
-  border: none;
-  background-color: white;
-}
-
 // Main container for content
 #content {
   width: 63%;
@@ -49,16 +53,17 @@ a:active {
 
 // Navbar styling
 nav {
-  background-color: #814c00;
+  background-color: $secondary;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-content: right;
   padding: 0.75rem 4rem;
   .nav__link {
-    color: white;
+    color: $primary-dark;
     font-size: $regular;
     margin-right: 2rem;
+    font-weight: $semi-bold;
   }
 }
 
@@ -163,6 +168,7 @@ h2 {
   background-color: black;
   height: 250px;
   width: 500px;
+  cursor: pointer;
 }
 
 /*
@@ -246,4 +252,58 @@ video {
       margin-bottom: 1rem;
     }
   }
+}
+
+#art-project {
+  border: 2px solid red;
+  .art-project__project {
+    background-image: url("./celtic-background.svg");
+    background-color: $primary;
+    border: 5px solid yellow;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .art__pic {
+      width: 500px;
+      height: 300px;
+    }
+    .art__blurb {
+      background-color: $primary-lighter;
+      position: absolute;
+      right: 5rem;
+      bottom: 2rem;
+      width: 40%;
+      box-shadow: 1rem 1rem 1px 1px $primary-lightest;
+      font-family: "Merriweather";
+      h3 {
+        font-size: $large;
+      }
+      p {
+        font-size: $regular;
+      }
+    }
+  }
+}
+
+.btn-outline {
+  border: 2px solid $primary-lightest;
+  background-color: transparent;
+  color: $primary-lightest;
+}
+
+.btn-large {
+  font-size: $large;
+  padding: 0.75rem;
+  border-radius: 3px;
+}
+
+#contact {
+  h3 {
+    font-size: $larger;
+    font-family: "Inconsolata";
+    margin-bottom: 2rem;
+  }
+  text-align: center;
+  border: 3px solid $primary-lightest;
+  padding: 5rem;
 }

@@ -47,12 +47,15 @@ a:active {
 // 63% for width
 #content {
   max-width: 950px;
-  border: 2px solid yellow;
   margin: auto;
   min-width: 800px;
 }
 
 // Section styling -------------------------->
+
+#tree {
+  width: 600px;
+}
 
 // Navbar styling
 nav {
@@ -77,6 +80,7 @@ nav {
     h3 {
       font-weight: $bold;
       font-size: $large;
+      margin-bottom: 0.2rem;
     }
     p {
       margin-bottom: 1rem;
@@ -88,12 +92,12 @@ nav {
   li {
     ul {
       margin-left: 20px;
-      li {
-        margin-right: 20px;
-      }
+      color: $secondary;
+    }
+    li {
+      margin-right: 20px;
     }
   }
-  color: $secondary;
 }
 
 h2 {
@@ -116,7 +120,83 @@ h2 {
 
 #herocontainer {
   height: 80vh;
-  border: 1px solid red;
+  display: flex;
+  padding: 0px 5%;
+  gap: 5%;
+  #graph {
+    flex: 0 0 40%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #graph {
+    flex-basis: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #graph {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #herocontainer {
+    border: 7px solid yellow !important;
+    flex-direction: column !important;
+    gap: 1%;
+    height: 100vh;
+  }
+  #graph {
+    width: 70% !important;
+  }
+}
+
+#hero-intro {
+  flex-shrink: 1;
+  flex-grow: 1;
+  // padding: 5rem 3rem;
+  color: $primary-lightest;
+  padding: 7%;
+  h1 {
+    font-size: 2.5rem;
+    font-family: "inconsolata";
+  }
+  hr {
+    fill: $primary-lightest;
+    background-color: $primary-lightest;
+    height: 3px;
+    background-color: none;
+    display: inline-block;
+    width: 250px;
+  }
+  p {
+    font-size: 20px;
+    margin: 1rem 0rem;
+  }
+  ul {
+    display: flex;
+    li {
+      button {
+        margin-right: 0.7rem;
+        font-size: 18px;
+        padding: 1rem 1.5rem;
+        background-color: $primary-lighter;
+        border: none;
+        color: $primary-lightest;
+      }
+    }
+    li:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+#graph {
+  margin: auto;
+  margin-top: 3rem;
+  // width: 40%;
+  flex-basis: 40%;
 }
 
 .big-project__project {
@@ -171,6 +251,19 @@ h2 {
 }
 
 .video {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 0.5rem;
+  .links {
+    a {
+      display: inline-block;
+      margin-right: 1rem;
+      font-family: "Inconsolata";
+      font-size: $large;
+      font-weight: $semi-bold;
+    }
+  }
 }
 
 video {
@@ -207,9 +300,15 @@ video {
   }
 }
 
+#small-project {
+  h3 {
+    margin-bottom: 1rem;
+  }
+}
+
 #small-project__all-projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
   .small-project__project {
     display: flex;
@@ -263,7 +362,7 @@ video {
       padding: 2rem;
       font-size: 30px;
       box-shadow: 20px 20px 1px 1px $primary-lightest;
-      margin-bottom: 2rem;
+      margin-bottom: 4rem;
     }
     p {
       font-size: $large;
@@ -273,16 +372,14 @@ video {
 }
 
 #art-project {
-  border: 2px solid red;
   .art-project__project {
     background-image: url("./celtic-background.svg");
     background-color: $primary;
-    border: 5px solid yellow;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     .art__pic {
-      width: 500px;
+      width: 600px;
       height: 300px;
       background-color: darkgray;
     }
@@ -292,10 +389,11 @@ video {
       right: 5rem;
       bottom: 2rem;
       width: 40%;
-      box-shadow: 1rem 1rem 1px 1px $primary-lightest;
+      box-shadow: 1rem 1rem 1px 1px $ternary;
       font-family: "Merriweather";
       h3 {
         font-size: $large;
+        margin-bottom: 0.5rem;
       }
       p {
         font-size: $regular;
@@ -329,12 +427,20 @@ video {
 
 /* Mid sized breakpoints */
 @media only screen and (max-width: 1000px) {
-  video {
-    width: 100%;
-    margin: auto;
-  }
   .video {
-    background-color: darkgreen;
+    border: 2px solid yellow;
+    width: 70%;
+    margin: auto;
+    video {
+      margin: auto;
+      width: 100%;
+    }
+    .links {
+      a {
+        display: inline-block;
+        margin-top: 1rem;
+      }
+    }
   }
   .big-project {
     text-align: center;
@@ -354,6 +460,8 @@ video {
     bottom: -1.3rem;
   }
   .big-project__blurb {
+    width: 80%;
+    margin: auto;
     display: flex;
     flex-direction: row;
     gap: 0rem;
@@ -367,5 +475,38 @@ video {
     .big-project__links {
       margin-top: 0px !important;
     }
+  }
+  #small-project__all-projects {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* tablet breakpoints */
+@media only screen and (max-width: 700px) {
+  .video {
+    border: 5px solid green;
+    flex-direction: column;
+    width: 100%;
+    video {
+      width: 100%;
+    }
+    .links {
+      text-align: left;
+    }
+  }
+  .big-project__blurb {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .big-project__description {
+      margin: 0px;
+      padding: 0px;
+    }
+    .big-project__links {
+      margin-top: 0px !important;
+    }
+  }
+  #small-project__all-projects {
+    grid-template-columns: 1fr;
   }
 }

@@ -5,6 +5,7 @@ const pageData = require("./data/pageData.json");
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public/css"));
 app.use(express.static(__dirname + "/public/assets"));
+app.use(express.static(__dirname + "/views"));
 
 app.get("/", (req, res) => {
   res.render("index", { pageData });

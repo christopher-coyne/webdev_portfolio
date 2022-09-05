@@ -18,21 +18,22 @@ function generateReport() {
 /* gsap stuff */
 const test_path = document.querySelector("#ab");
 let tl = gsap.timeline();
-tl.to("#starter", { strokeDashoffset: 0, duration: 0.3 }); // 2
-tl.to("#ac", { strokeDashoffset: 0, duration: 0.3 }); // 2
-tl.to("#circlec", { fill: "#E0FBFC", duration: 0.05 });
-tl.to("#ad", { strokeDashoffset: 0, duration: 0.3 }); // 4
-tl.to("#circled", { fill: "#E0FBFC", duration: 0.05 });
-tl.to("#cg", { strokeDashoffset: 0, duration: 0.3 }); // 4
-tl.to("#circleg", { fill: "#E0FBFC", duration: 0.05 });
-tl.to("#ch", { strokeDashoffset: 0, duration: 0.3 }); // 5
-tl.to("#circleh", { fill: "#E0FBFC", duration: 0.05 });
-tl.to("#gl", { strokeDashoffset: 0, duration: 0.3 }); // 7
-tl.to("#circlel", { fill: "#E0FBFC", duration: 0.05 });
+tl.delay(1);
+tl.to("#starter", { strokeDashoffset: 0, duration: 0.5 }); // 2
+tl.to("#ac", { strokeDashoffset: 0, duration: 0.5 }); // 2
+tl.to("#circlec", { fill: "#E0FBFC", duration: 0.1 });
+tl.to("#ad", { strokeDashoffset: 0, duration: 0.5 }); // 4
+tl.to("#circled", { fill: "#E0FBFC", duration: 0.1 });
+tl.to("#cg", { strokeDashoffset: 0, duration: 0.5 }); // 4
+tl.to("#circleg", { fill: "#E0FBFC", duration: 0.1 });
+tl.to("#ch", { strokeDashoffset: 0, duration: 0.5 }); // 5
+tl.to("#circleh", { fill: "#E0FBFC", duration: 0.1 });
+tl.to("#gl", { strokeDashoffset: 0, duration: 0.5 }); // 7
+tl.to("#circlel", { fill: "#E0FBFC", duration: 0.1 });
 tl.to("#di", { strokeDashoffset: 0, duration: 0.3 }); // 7
-tl.to("#circlei", { fill: "#E0FBFC", duration: 0.05 });
-tl.to("#ab", { strokeDashoffset: 0, duration: 0.3 }); // 8
-tl.to("#circleb", { fill: "#E0FBFC", duration: 0.05 });
+tl.to("#circlei", { fill: "#E0FBFC", duration: 0.1 });
+tl.to("#ab", { strokeDashoffset: 0, duration: 0.5 }); // 8
+tl.to("#circleb", { fill: "#E0FBFC", duration: 0.1 });
 tl.to("#lo", { strokeDashoffset: 0, duration: 0.3 }); // 9
 tl.to("#circleo", { fill: "#E0FBFC", duration: 0.05 });
 tl.to("#bf", { strokeDashoffset: 0, duration: 0.3 }); // 9
@@ -48,6 +49,21 @@ tl.to("#circlej", { fill: "#E0FBFC", duration: 0.05 });
 tl.to("#be", { strokeDashoffset: 0, duration: 0.3 }); // 17
 tl.to("#circlee", { fill: "#E0FBFC", duration: 0.05 });
 console.log("tl : ", tl);
+
+gsap.from("#graph", {
+  opacity: 0,
+  y: 100,
+  duration: 1,
+});
+gsap.from("#hero-intro", {
+  opacity: 0,
+  duration: 2,
+});
+
+gsap.from("#small-project", {
+  scrollTrigger: "#small-project", // start the animation when ".box" enters the viewport (once)
+  x: 500,
+});
 /*
 var video = document.querySelector(".video");
 var videoFiller = document.querySelector(".videoFiller");

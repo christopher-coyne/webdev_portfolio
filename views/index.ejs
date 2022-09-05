@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href='styles.css'
+    <link rel="stylesheet" href='styles.css' />
   </head>
   <script
     src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"
     defer
   ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" defer></script>
   <script src="./scripts.js" defer></script>
   <body>
     <nav>
@@ -26,7 +27,21 @@
         <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <section id="herocontainer">hello world, placeholder</section>
+    <section id="herocontainer">
+            <!-- <img src='./ink_noshadow.svg' id="tree"/> -->
+            <%- include( './partials/graph.ejs') %>
+        <section id="hero-intro">
+            <h1>Chris Coyne</h1>
+            <hr />
+            <p>Developer with an interest in frontend and an appreciation for the beauty of programming </p>
+            <ul>
+            <li><a href="www.google.com"><button>Github</button></a></li>
+            <li><a href="www.google.com"><button>LinkedIn</button></a></li>
+            <li><a href="www.google.com"><button>Resume</button></a></li>
+          </ul>
+
+        </section>
+    </section>
     <section id="content">
       <section id="about">
         <h2>About Me</h2>
@@ -88,19 +103,23 @@
             <!-- <img src="./videos/largescreen_resize.gif" class="freezeframe" /> -->
             <video
               class="clip"
-              width="500"
               src="./videos/resizedmp4.mp4"
               type="mp4"
               loop
               muted="muted"
             ></video>
+            <div class="links">
+                <% for (const link of proj.links) { %>
+                    <a href="<%= link.link %>"> <%= link.type %> </a>
+                <% } %>
+            </div>
           </div>
           <section class="big-project__blurb">
             <article class="big-project__description">
               <h3><%= proj.name %></h3>
               <p><%= proj.shortDescription %></p>
             </article>
-            <ul>
+            <ul class="big-project__links">
               <% for (const skill of proj.skills) { %>
               <li class="secondary-text"><%= skill %></li>
               <% } %>
@@ -134,7 +153,6 @@
           </article>
           <% } %>
         </section>
-        <button class="btn btn--light-outline">View All</button>
       </section>
       <section id="art">
         <h2>Art and Computer Science</h2>

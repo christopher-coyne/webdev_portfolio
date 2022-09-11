@@ -36,11 +36,16 @@ ul {
 }
 
 a,
-a:hover,
 a:focus,
 a:active {
   text-decoration: none;
   color: white;
+}
+
+.white-link:hover {
+  color: white;
+  transition: color;
+  transition-duration: 0.3s;
 }
 
 // Main container for content
@@ -51,6 +56,21 @@ a:active {
   min-width: 800px;
 }
 
+.link-button {
+  margin-right: 0.7rem;
+  font-size: 18px;
+  padding: 1rem 1.5rem;
+  background-color: $primary-lighter;
+  border: none;
+  color: $primary-lightest;
+}
+.link-button:hover {
+  background-color: #18242c;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
 // Section styling -------------------------->
 
 #tree {
@@ -59,17 +79,32 @@ a:active {
 
 // Navbar styling
 nav {
+  svg {
+    height: 40px;
+    border: 1px solid red;
+  }
+  svg:hover {
+    svg {
+      width: 200px;
+    }
+    rect {
+      width: 200;
+    }
+  }
   background-color: $secondary;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   justify-content: right;
-  padding: 0.75rem 4rem;
+  padding: 0.5rem 4rem;
   .nav__link {
     color: $primary-dark;
     font-size: $regular;
     margin-right: 2rem;
     font-weight: $semi-bold;
+  }
+  .nav__link:hover {
+    text-decoration: underline;
   }
 }
 
@@ -124,23 +159,23 @@ h2 {
   padding: 0px 5%;
   gap: 5%;
   #graph {
-    flex: 0 0 40%;
+    flex: 0 0 37%;
   }
 }
 
 @media only screen and (max-width: 1200px) {
   #graph {
-    flex-basis: 50% !important;
+    flex-basis: 45% !important;
   }
 }
 
 @media only screen and (max-width: 1000px) {
   #graph {
-    width: 100% !important;
+    flex-basis: 40% !important;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   #herocontainer {
     border: 7px solid yellow !important;
     flex-direction: column !important;
@@ -148,7 +183,7 @@ h2 {
     height: 100vh;
   }
   #graph {
-    width: 70% !important;
+    flex-basis: 50% !important;
   }
 }
 
@@ -177,14 +212,6 @@ h2 {
   ul {
     display: flex;
     li {
-      button {
-        margin-right: 0.7rem;
-        font-size: 18px;
-        padding: 1rem 1.5rem;
-        background-color: $primary-lighter;
-        border: none;
-        color: $primary-lightest;
-      }
     }
     li:hover {
       cursor: pointer;
@@ -213,7 +240,7 @@ h2 {
       h3 {
         font-family: "Inconsolata";
         font-size: $large;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         color: $primary-lightest;
       }
       padding: 1.5rem;
@@ -272,7 +299,7 @@ video {
 }
 
 video:hover {
-  box-shadow: 5px 5px 5px 5px black;
+  box-shadow: 5px 5px 5px #18242c;
 }
 
 /*
@@ -364,6 +391,13 @@ video {
       box-shadow: 20px 20px 1px 1px $primary-lightest;
       margin-bottom: 4rem;
     }
+    #quote:hover {
+      box-shadow: 20px 20px 1px 1px #18242c;
+      // transform: translate(-10px, -10px);
+      transition: box-shadow;
+      transition-duration: 2s;
+      transition-timing-function: linear;
+    }
     p {
       font-size: $large;
       margin-bottom: 1rem;
@@ -373,7 +407,6 @@ video {
 
 #art-project {
   .art-project__project {
-    background-image: url("./celtic-background.svg");
     background-color: $primary;
     position: relative;
     background-repeat: no-repeat;
@@ -421,7 +454,6 @@ video {
     margin-bottom: 2rem;
   }
   text-align: center;
-  border: 3px solid $primary-lightest;
   padding: 5rem;
 }
 

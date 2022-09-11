@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href='styles.css' />
+    <title>Christopher Coyne Dev</title>
+    <meta name="description" content="Personal web development and art portfolio for christopher coyne" />
   </head>
   <script
     src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"
@@ -14,6 +16,7 @@
   <script src="./scripts.js" defer></script>
   <body>
     <nav>
+      <%- include( './partials/cc_logo.ejs') %>
       <ul>
         <li><a class="nav__link" href="#about">About</a></li>
       </ul>
@@ -28,16 +31,15 @@
       </ul>
     </nav>
     <section id="herocontainer">
-            <!-- <img src='./ink_noshadow.svg' id="tree"/> -->
             <%- include( './partials/graph.ejs') %>
         <section id="hero-intro">
             <h1>Chris Coyne</h1>
             <hr />
             <p>Developer with an interest in frontend and an appreciation for the beauty of programming </p>
             <ul>
-            <li><a href="www.google.com"><button>Github</button></a></li>
-            <li><a href="www.google.com"><button>LinkedIn</button></a></li>
-            <li><a href="www.google.com"><button>Resume</button></a></li>
+            <li><a href="www.google.com"><button class="link-button">Github</button></a></li>
+            <li><a href="www.google.com"><button class="link-button">LinkedIn</button></a></li>
+            <li><a href="www.google.com"><button class="link-button">Resume</button></a></li>
           </ul>
 
         </section>
@@ -58,12 +60,12 @@
           </p>
           <p>
             I live in NYC, and am currently working as a software consultant at
-            <a href="www.google.com" class="secondary-text">Pyyne Digital</a>.
+            <a href="www.google.com" class="secondary-text white-link">Pyyne Digital</a>.
           </p>
           <h3>Some technologies I've been using recently...</h3>
           <ul id="tech-skills">
             <li id="languages" class="skills">
-              <img src="bulletpoint.svg" />
+              <img src="bulletpoint.svg" alt="bulletpoint"/>
               Languages:
               <ul class="secondary-text">
                 <li>Javascript</li>
@@ -73,7 +75,7 @@
               </ul>
             </li>
             <li id="frameworks" class="skills">
-              <img src="bulletpoint.svg" />
+              <img src="bulletpoint.svg" alt="bulletpoint"/>
               Frameworks And Libraries:
               <ul class="secondary-text">
                 <li>React</li>
@@ -82,7 +84,7 @@
               </ul>
             </li>
             <li id="platforms" class="skills">
-              <img src="bulletpoint.svg" />
+              <img src="bulletpoint.svg" alt="bulletpoint"/>
               Platforms:
               <ul class="secondary-text">
                 <li>Amazon Web Services</li>
@@ -166,8 +168,10 @@
           <% } %>
         </article>
         <div class='img-container'>
-        <img id='celtic' src="Celtic-knot-basic.svg"></img>
+        
+        <!-- <img id='celtic' src="Celtic-knot-basic.svg" alt="celtic knot"></img> -->
         </div>
+        <!-- 
         <section id='art-project'>
             <% for (const proj of pageData.artProjects) { %>
                 <section class="art-project__project">
@@ -180,6 +184,7 @@
             <% } %>
             </section>
       </section>
+    -->
       <section id="contact">
         <h3>Like my work? Want to collaborate?</h3>
         <button class="btn btn-outline btn-large">Contact Me</button>
@@ -187,5 +192,3 @@
     </section>
   </body>
 </html>
-
-<!-- <img src="./videos/screenrec_test.gif" class="freezeframe" /> -->

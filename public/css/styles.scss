@@ -7,7 +7,7 @@ html {
 body {
   background-color: $primary;
   section {
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 }
 
@@ -79,24 +79,36 @@ a:active {
 
 // Navbar styling
 nav {
-  svg {
-    height: 40px;
-    border: 1px solid red;
-  }
-  svg:hover {
-    svg {
-      width: 200px;
-    }
-    rect {
-      width: 200;
-    }
-  }
+  width: 100%;
+  border: 1px solid red;
   background-color: $secondary;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: right;
-  padding: 0.5rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 4%;
+  svg {
+    height: 30px;
+  }
+  svg:hover {
+    rect {
+      fill: $primary-dark;
+      transition-duration: 2s;
+      transition-property: fill;
+    }
+    path {
+      fill: white;
+      transition-duration: 1s;
+      transition-property: fill;
+    }
+  }
+  ul {
+    display: inline-block;
+    li {
+      display: inline-block;
+    }
+  }
   .nav__link {
     color: $primary-dark;
     font-size: $regular;
@@ -154,24 +166,14 @@ h2 {
 }
 
 #herocontainer {
+  margin: 0px auto 2rem auto;
   height: 80vh;
+  max-width: 1200px;
   display: flex;
   padding: 0px 5%;
   gap: 5%;
   #graph {
-    flex: 0 0 37%;
-  }
-}
-
-@media only screen and (max-width: 1200px) {
-  #graph {
-    flex-basis: 45% !important;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-  #graph {
-    flex-basis: 40% !important;
+    flex: 0 0 45%;
   }
 }
 
@@ -184,6 +186,7 @@ h2 {
   }
   #graph {
     flex-basis: 50% !important;
+    width: 100%;
   }
 }
 
@@ -211,8 +214,6 @@ h2 {
   }
   ul {
     display: flex;
-    li {
-    }
     li:hover {
       cursor: pointer;
     }
@@ -293,9 +294,30 @@ h2 {
   }
 }
 
+.video-overlay-container {
+  position: relative;
+}
+
+.video-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: $primary-lightest;
+  opacity: 20%;
+  z-index: 2;
+}
+
+.video-overlay:hover {
+  opacity: 5%;
+}
+
 video {
   width: 500px;
   cursor: pointer;
+}
+
+video::after {
+  background-color: red;
 }
 
 video:hover {
@@ -406,6 +428,9 @@ video {
 }
 
 #art-project {
+  svg {
+    width: 100%;
+  }
   .art-project__project {
     background-color: $primary;
     position: relative;
@@ -515,6 +540,11 @@ video {
 
 /* tablet breakpoints */
 @media only screen and (max-width: 700px) {
+  nav {
+    #nav-links {
+      display: none;
+    }
+  }
   .video {
     border: 5px solid green;
     flex-direction: column;
@@ -540,5 +570,11 @@ video {
   }
   #small-project__all-projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #content {
+    width: 95%;
   }
 }

@@ -4,45 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href='styles.css' />
+    <link rel="stylesheet" href="styles.css" />
     <title>Christopher Coyne Dev</title>
-    <meta name="description" content="Personal web development and art portfolio for christopher coyne" />
+    <meta
+      name="description"
+      content="Personal web development and art portfolio for christopher coyne"
+    />
   </head>
   <script
     src="https://unpkg.com/freezeframe/dist/freezeframe.min.js"
     defer
   ></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js" defer></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"
+    defer
+  ></script>
   <script src="./scripts.js" defer></script>
   <body>
     <nav>
       <%- include( './partials/cc_logo.ejs') %>
-      <ul>
+      <ul id="nav-links">
         <li><a class="nav__link" href="#about">About</a></li>
-      </ul>
-      <ul>
         <li><a class="nav__link" href="#big-project">Projects</a></li>
-      </ul>
-      <ul>
         <li><a class="nav__link" href="#art">Artwork</a></li>
-      </ul>
-      <ul>
         <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <section id="herocontainer">
-            <%- include( './partials/graph.ejs') %>
-        <section id="hero-intro">
-            <h1>Chris Coyne</h1>
-            <hr />
-            <p>Developer with an interest in frontend and an appreciation for the beauty of programming </p>
-            <ul>
-            <li><a href="www.google.com"><button class="link-button">Github</button></a></li>
-            <li><a href="www.google.com"><button class="link-button">LinkedIn</button></a></li>
-            <li><a href="www.google.com"><button class="link-button">Resume</button></a></li>
-          </ul>
-
-        </section>
+      <%- include( './partials/graph.ejs') %>
+      <section id="hero-intro">
+        <h1>Chris Coyne</h1>
+        <hr />
+        <p>
+          Developer with an interest in frontend and an appreciation for the
+          beauty of programming
+        </p>
+        <ul>
+          <li>
+            <a href="https://github.com/christopher-coyne" target="”_blank”"
+              ><button class="link-button">Github</button></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/christopher-coyne/"
+              target="”_blank”"
+              ><button class="link-button">LinkedIn</button></a
+            >
+          </li>
+          <li>
+            <a href="www.google.com" target="”_blank”"
+              ><button class="link-button">Resume</button></a
+            >
+          </li>
+        </ul>
+      </section>
     </section>
     <section id="content">
       <section id="about">
@@ -60,12 +76,14 @@
           </p>
           <p>
             I live in NYC, and am currently working as a software consultant at
-            <a href="www.google.com" class="secondary-text white-link">Pyyne Digital</a>.
+            <a href="www.google.com" class="secondary-text white-link"
+              >Pyyne Digital</a
+            >.
           </p>
           <h3>Some technologies I've been using recently...</h3>
           <ul id="tech-skills">
             <li id="languages" class="skills">
-              <img src="bulletpoint.svg" alt="bulletpoint"/>
+              <img src="bulletpoint.svg" alt="bulletpoint" />
               Languages:
               <ul class="secondary-text">
                 <li>Javascript</li>
@@ -75,7 +93,7 @@
               </ul>
             </li>
             <li id="frameworks" class="skills">
-              <img src="bulletpoint.svg" alt="bulletpoint"/>
+              <img src="bulletpoint.svg" alt="bulletpoint" />
               Frameworks And Libraries:
               <ul class="secondary-text">
                 <li>React</li>
@@ -84,7 +102,7 @@
               </ul>
             </li>
             <li id="platforms" class="skills">
-              <img src="bulletpoint.svg" alt="bulletpoint"/>
+              <img src="bulletpoint.svg" alt="bulletpoint" />
               Platforms:
               <ul class="secondary-text">
                 <li>Amazon Web Services</li>
@@ -103,17 +121,20 @@
           <div class="video">
             <!-- <div class="videoFiller">filler here</div> -->
             <!-- <img src="./videos/largescreen_resize.gif" class="freezeframe" /> -->
-            <video
-              class="clip"
-              src="./videos/resizedmp4.mp4"
-              type="mp4"
-              loop
-              muted="muted"
-            ></video>
+            <div class="video-overlay-container">
+              <div class="video-overlay"></div>
+              <video
+                class="clip"
+                src="./videos/resizedmp4.mp4"
+                type="mp4"
+                loop
+                muted="muted"
+              ></video>
+            </div>
             <div class="links">
-                <% for (const link of proj.links) { %>
-                    <a href="<%= link.link %>"> <%= link.type %> </a>
-                <% } %>
+              <% for (const link of proj.links) { %>
+              <a href="<%= link.link %>"> <%= link.type %> </a>
+              <% } %>
             </div>
           </div>
           <section class="big-project__blurb">
@@ -167,10 +188,7 @@
           <p><%- line %></p>
           <% } %>
         </article>
-        <div class='img-container'>
-        
-        <!-- <img id='celtic' src="Celtic-knot-basic.svg" alt="celtic knot"></img> -->
-        </div>
+        <%- include( './partials/celtic-bar.ejs') %>
         <!-- 
         <section id='art-project'>
             <% for (const proj of pageData.artProjects) { %>
@@ -185,9 +203,10 @@
             </section>
       </section>
     -->
+      </section>
       <section id="contact">
         <h3>Like my work? Want to collaborate?</h3>
-        <button class="btn btn-outline btn-large">Contact Me</button>
+        <button class="link-button">Contact Me</button>
       </section>
     </section>
   </body>

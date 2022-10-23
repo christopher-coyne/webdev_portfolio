@@ -1,7 +1,7 @@
 {
   "artBlurb": [
-    "During my education, one of the most influential classes I took was “Literature in the Age of AI” taught by professor <a href='www.google.com' class='secondary-text white-link'>Dennis Tenen</a>. My eyes were opened to the ways that computer science, philosophy, and art could intermix and I wanted to contribute in my own way.",
-    "I have always been interested in visual arts, and have an array of work you can check out <a href='www.google.com' class='secondary-text white-link'>here</a>. In the future, I want to create pieces of art that incorporate computer science, literature, and design into something new and powerful."
+    "During my education, one of the most influential classes I took was “Literature in the Age of AI” taught by professor <a href='www.google.com' class='secondary-text white-link'>Dennis Tenen</a>. My eyes were opened to the ways that computer science, philosophy, and art could intermix and I wanted to contribute in my own way. My final project for the class explored the universal language developed by philosopher John Wilkins, and sought to <a href='https://medium.com/@christcoyne/wilkins-and-the-universal-language-ccd14ac2179b'>recreate it using modern AI tools</a>.",
+    "I have always been passionate about the visual arts, and have an array of work you can check out <a href='www.google.com' class='secondary-text white-link'>here</a>. In the future, I hope to create pieces that combine art and computer science into something new."
   ],
   "artProjects": [
     {
@@ -46,14 +46,14 @@
         }
       ],
       "shortDescription": "Chatbot powered by AWS services that recommends top movies from IMDB. Implemented with a CICD pipeline and AWS serverless design.",
-      "skills": ["React", "Tailwind CSS", "AWS", "DynamoDB", "Pytest"],
+      "skills": ["React", "Tailwind CSS", "AWS", "DynamoDB", "Serverless"],
       "videoLink": "www.google.com"
     }
   ],
   "smallProjects": [
     {
       "name": "Recipe Finder",
-      "shortDescription": "Frontend app that lets users search for recipes and add their own. Created with <span class='secondary-text'>Typescript</span> and <span class='secondary-text'>Styled Components</span>. Integration tests written with <span class='secondary-text'>Jest</span>.",
+      "shortDescription": "Frontend app that lets users search for recipes and add their own. Created with <span class='secondary-text'>Typescript</span> and <span class='secondary-text'>Styled Components</span>.",
       "links": [
         {
           "type": "Github",

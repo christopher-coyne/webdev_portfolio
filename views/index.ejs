@@ -36,7 +36,7 @@
         <div id="hero-intro">
           <h1>Chris Coyne</h1>
           <hr />
-          <p>
+          <p class="font-body">
             Developer with an interest in frontend and an appreciation for the
             beauty of programming
           </p>
@@ -64,8 +64,8 @@
       <section id="about">
         <h2>About Me</h2>
         <hr class="main-break" />
-        <article>
-          <h3>Hello All,</h3>
+        <article class="font-body">
+          <h3 class="font-body">Hello All,</h3>
           <p>
             I Am a junior web developer and recent graduate of Columbia
             University, where I received an MS in Computer science. While in
@@ -80,7 +80,9 @@
               >Pyyne Digital</a
             >.
           </p>
-          <h3>Some technologies I've been using recently...</h3>
+          <h3 class="font-body">
+            Some technologies I've been using recently...
+          </h3>
           <ul id="tech-skills">
             <li id="languages" class="skills">
               <img src="bulletpoint.svg" alt="bulletpoint" />
@@ -131,16 +133,18 @@
             </div>
             <div class="links">
               <% for (const link of proj.links) { %>
-              <a href="<%= link.link %>"> <%= link.type %> </a>
+              <a href="<%= link.link %>" class="font-subtitle">
+                <%= link.type %>
+              </a>
               <% } %>
             </div>
           </div>
           <section class="big-project__blurb">
             <article class="big-project__description">
-              <h3><%= proj.name %></h3>
-              <p><%= proj.shortDescription %></p>
+              <h3 class="font-subtitle"><%= proj.name %></h3>
+              <p class="font-small-body"><%= proj.shortDescription %></p>
             </article>
-            <ul class="big-project__links">
+            <ul class="big-project__links font-small-body">
               <% for (const skill of proj.skills) { %>
               <li class="secondary-text"><%= skill %></li>
               <% } %>
@@ -160,9 +164,11 @@
           <% for (const proj of pageData.smallProjects) { %>
           <article class="small-project__project">
             <div>
-              <h3><%= proj.name %></h3>
+              <h3 class="font-subtitle"><%= proj.name %></h3>
               <hr />
-              <p class="description"><%- proj.shortDescription %></p>
+              <p class="description font-small-body">
+                <%- proj.shortDescription %>
+              </p>
             </div>
             <ul>
               <% for (const link of proj.links) { %>
@@ -186,24 +192,10 @@
             “I have always imagined that Paradise will be a kind of library”
           </div>
           <% for (const line of pageData.artBlurb) { %>
-          <p><%- line %></p>
+          <p class="font-body"><%- line %></p>
           <% } %>
         </article>
         <%- include( './partials/celtic-bar.ejs') %>
-        <!-- 
-        <section id='art-project'>
-            <% for (const proj of pageData.artProjects) { %>
-                <section class="art-project__project">
-                  <div class='art__pic'>placeholder</div>
-                  <article class='art__blurb'>
-                    <h3><%= proj.name %></h3>
-                    <p><%= proj.shortDescription %></p>
-                  </article>
-                </section>
-            <% } %>
-            </section>
-      </section>
-    -->
       </section>
       <section id="contact">
         <h3>Like my work? Want to collaborate?</h3>

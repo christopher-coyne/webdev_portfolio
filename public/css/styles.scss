@@ -1,27 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Merriweather:ital,wght@0,400;0,700;1,300&family=Nunito:wght@400;600;700&display=swap");
 @import "./variables.scss";
 
+.font-body {
+  font-size: 22px;
+}
+
+.font-subtitle {
+  font-size: 22px;
+  border: 1px solid red;
+}
+
+.font-small-body {
+  font-size: 18px;
+}
+
 html {
   scroll-behavior: smooth;
 }
 body {
   background-color: $primary;
+  font-family: nunito;
+  color: white;
   section {
     margin-bottom: 4rem;
   }
 }
 
 // General Element Styling
-
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-}
-
-body {
-  font-family: nunito;
-  color: white;
 }
 
 button {
@@ -80,10 +89,6 @@ a:active {
 
 // Section styling -------------------------->
 
-#tree {
-  width: 600px;
-}
-
 // Navbar styling
 nav {
   width: 100%;
@@ -129,10 +134,8 @@ nav {
 #about {
   article {
     padding: 0rem 1rem;
-    font-size: $large;
     h3 {
       font-weight: $bold;
-      font-size: $large;
       margin-bottom: 0.2rem;
     }
     p {
@@ -152,12 +155,6 @@ nav {
     }
   }
 }
-
-/*
-#hero-hr {
-  margin: 0px;
-}
-*/
 
 h2 {
   font-family: "Inconsolata";
@@ -212,7 +209,7 @@ h2 {
     border: none;
   }
   p {
-    font-size: 24px;
+    // font-size: 24px;
     margin: 1rem 0rem;
   }
   ul {
@@ -270,24 +267,21 @@ h2 {
   .big-project__blurb {
     flex: 1 0 30%;
     position: relative;
-    font-size: $regular;
     .big-project__description {
       h3 {
         font-family: "Inconsolata";
-        font-size: $large;
         margin-bottom: 0.75rem;
         color: $primary-lightest;
       }
       padding: 1.5rem;
       background-color: $primary-lighter;
     }
-    // links
+    // tech used
     ul {
       margin-top: 1rem;
       padding: 0.5rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
       background-color: $primary-lighter;
       font-weight: $semi-bold;
-      color: green;
       li {
         margin-top: 0.5rem;
         display: inline-block;
@@ -322,7 +316,6 @@ h2 {
       display: inline-block;
       margin-right: 1rem;
       font-family: "Inconsolata";
-      font-size: $large;
       font-weight: $semi-bold;
     }
   }
@@ -341,7 +334,7 @@ h2 {
     }
 
     img:hover {
-      box-shadow: 5px 5px 5px #273441;
+      box-shadow: 5px 5px 5px #232f3a;
     }
   }
 }
@@ -383,7 +376,6 @@ h2 {
     padding: 1.5rem;
     h3 {
       font-family: Inconsolata;
-      font-size: 24px;
       font-weight: $semi-bold;
       color: $primary-lightest;
     }
@@ -440,7 +432,6 @@ h2 {
       transition-timing-function: linear;
     }
     p {
-      font-size: $large;
       margin-bottom: 1rem;
     }
   }
@@ -504,40 +495,15 @@ h2 {
 /* Mid sized breakpoints */
 @media only screen and (max-width: 1000px) {
   h2 {
-    font-size: 20px;
-  }
-  #about {
-    article {
-      h3 {
-        font-size: 18px;
-      }
-    }
-    p {
-      font-size: 18px;
-    }
-    ul {
-      font-size: 18px;
-    }
-  }
-  #art {
-    article {
-      #quote {
-        font-size: 24px;
-      }
-      p {
-        font-size: 18px;
-      }
-    }
+    font-size: 22px;
   }
   .screenshot {
-    border: 1px solid red;
     width: 500px;
     margin: auto;
   }
   .screenshot-overlay-container {
     height: 250px;
     width: 500px;
-    border: 1px solid red;
   }
   .screenshot-img {
     width: 100% !important;
@@ -557,6 +523,10 @@ h2 {
     border: 3px solid red;
     min-width: 100px;
     width: 90%;
+  }
+
+  #quote {
+    font-size: 24px !important;
   }
   .big-project__project {
     flex-direction: column;
@@ -588,7 +558,6 @@ h2 {
   }
   #herocontainer {
     padding: 0rem 1rem;
-    border: 2px solid purple;
     // flex-direction: column;
     #hero-intro {
       h1 {
@@ -607,6 +576,15 @@ h2 {
 
 /* tablet breakpoints */
 @media only screen and (max-width: 700px) {
+  .font-small-body {
+    font-size: 18px;
+  }
+  .font-body {
+    font-size: 18px;
+  }
+  .font-subtitle {
+    font-size: 20px;
+  }
   nav {
     #nav-links {
       display: none;
@@ -655,6 +633,12 @@ h2 {
 }
 
 @media only screen and (max-width: 500px) {
+  .font-subtitle {
+    font-size: 18px;
+  }
+  .font-small-body {
+    font-size: 16px;
+  }
   #content {
     width: 95%;
   }
@@ -662,22 +646,21 @@ h2 {
     gap: 1rem;
     height: 85vh;
   }
+  #quote {
+    font-size: 18px !important;
+    padding: 1rem !important;
+  }
   #hero-intro {
-    border: 1px solid yellow;
     padding: 0px;
-    h1 {
-      font-size: 22px;
-    }
-    p {
-      font-size: 16px;
-    }
   }
   .screenshot {
     width: 100% !important;
-    border: 1px solid red;
     align-items: stretch;
   }
   .big-project__project {
     padding: 0px;
+  }
+  .big-project__blurb::after {
+    display: none;
   }
 }

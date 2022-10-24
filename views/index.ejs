@@ -118,18 +118,16 @@
         <hr class="main-break" />
         <% for (const proj of pageData.bigProjects) { %>
         <article class="big-project__project">
-          <div class="video">
+          <div class="screenshot">
             <!-- <div class="videoFiller">filler here</div> -->
             <!-- <img src="./videos/largescreen_resize.gif" class="freezeframe" /> -->
-            <div class="video-overlay-container">
-              <div class="video-overlay"></div>
-              <video
-                class="clip"
-                src="./videos/resizedmp4.mp4"
-                type="mp4"
-                loop
-                muted="muted"
-              ></video>
+            <div class="screenshot-overlay-container">
+              <!-- <div class="screenshot-overlay"></div> -->
+              <img
+                class="screenshot-img"
+                src="<%= proj.screenshot %>"
+                alt="<%= proj.screenshot %>"
+              />
             </div>
             <div class="links">
               <% for (const link of proj.links) { %>
@@ -169,7 +167,10 @@
             <ul>
               <% for (const link of proj.links) { %>
               <li>
-                <a href="<%= link.link %>"> <%= link.type %></a>
+                <a href="<%= link.link %>">
+                  <img src=<%= link.type === 'Github' ? './github.svg' :
+                  './bx_link-external.svg'%> /></a
+                >
               </li>
               <% } %>
             </ul>

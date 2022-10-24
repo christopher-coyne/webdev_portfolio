@@ -87,7 +87,6 @@ a:active {
 // Navbar styling
 nav {
   width: 100%;
-  border: 1px solid red;
   background-color: $secondary;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,34 +178,22 @@ h2 {
 }
 
 #herocontainer {
-  margin: 0px auto 2rem auto;
-  height: 80vh;
+  padding: 0rem 5%;
+  height: 75vh;
   max-width: 1200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10%;
   #graph {
-    flex: 0 0 20%;
-  }
-}
-
-@media only screen and (max-width: 850px) {
-  #herocontainer {
-    border: 7px solid yellow !important;
-    flex-direction: column !important;
-    gap: 1%;
-    height: 100vh;
-  }
-  #graph {
-    flex-basis: 50% !important;
-    width: 100%;
+    flex: 0 0 25%;
   }
 }
 
 #hero-intro {
   flex-shrink: 1;
   flex-grow: 1;
+  padding-right: 1rem;
   // padding: 5rem 3rem;
   color: $primary-lightest;
   h1 {
@@ -242,6 +229,33 @@ h2 {
         gap: 0.5rem;
         color: $primary-lightest;
         margin: 0px 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  #herocontainer {
+    flex-direction: column;
+    #graph {
+      margin-top: 2rem;
+    }
+  }
+  #hero-intro {
+    padding: 0rem 10%;
+    text-align: center;
+    hr {
+      display: block;
+      margin: auto;
+      width: 200px;
+      margin: 0.2rem auto;
+    }
+    ul {
+      padding: 0rem 1rem;
+      text-align: center;
+      display: inline-block;
+      li {
+        display: inline-block;
       }
     }
   }
@@ -298,7 +312,7 @@ h2 {
   color: $secondary;
 }
 
-.video {
+.screenshot {
   display: flex;
   flex-direction: column;
   text-align: right;
@@ -312,43 +326,25 @@ h2 {
       font-weight: $semi-bold;
     }
   }
-}
+  .screenshot-overlay-container {
+    position: relative;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 500px;
+    img {
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      margin: 0px !important;
+      padding: 0px !important;
+      border-radius: 5px;
+    }
 
-.video-overlay-container {
-  position: relative;
+    img:hover {
+      box-shadow: 5px 5px 5px #273441;
+    }
+  }
 }
-
-.video-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: #e0fbfc;
-  opacity: 10%;
-  z-index: 2;
-}
-
-.video-overlay:hover {
-  opacity: 5%;
-}
-
-video {
-  width: 500px;
-  cursor: pointer;
-}
-
-video::after {
-  background-color: red;
-}
-
-video:hover {
-  box-shadow: 5px 5px 5px #18242c;
-}
-
-/*
-video {
-  width: 1000px;
-}
-*/
 
 .img-container {
   text-align: center;
@@ -401,6 +397,9 @@ video {
       font-size: $regular;
     }
     ul {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
       margin-top: 2rem;
       // links
       text-align: right;
@@ -409,7 +408,7 @@ video {
         font-size: $large;
         font-family: "Inconsolata";
         font-weight: $semi-bold;
-        margin-left: 1rem;
+        margin-left: 1.5rem;
         color: $primary-dark;
       }
       flex-direction: row;
@@ -504,14 +503,46 @@ video {
 
 /* Mid sized breakpoints */
 @media only screen and (max-width: 1000px) {
-  .video {
-    border: 2px solid yellow;
-    width: 70%;
-    margin: auto;
-    video {
-      margin: auto;
-      width: 100%;
+  h2 {
+    font-size: 20px;
+  }
+  #about {
+    article {
+      h3 {
+        font-size: 18px;
+      }
     }
+    p {
+      font-size: 18px;
+    }
+    ul {
+      font-size: 18px;
+    }
+  }
+  #art {
+    article {
+      #quote {
+        font-size: 24px;
+      }
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  .screenshot {
+    border: 1px solid red;
+    width: 500px;
+    margin: auto;
+  }
+  .screenshot-overlay-container {
+    height: 250px;
+    width: 500px;
+    border: 1px solid red;
+  }
+  .screenshot-img {
+    width: 100% !important;
+    height: 100% !important;
+    margin: auto;
     .links {
       a {
         display: inline-block;
@@ -531,7 +562,6 @@ video {
     flex-direction: column;
     margin-bottom: 4rem;
   }
-  /* same as before media query. change?? */
   .big-project__blurb::after {
     left: 1.3rem;
     bottom: -1.3rem;
@@ -556,6 +586,23 @@ video {
   #small-project__all-projects {
     grid-template-columns: 1fr 1fr;
   }
+  #herocontainer {
+    padding: 0rem 1rem;
+    border: 2px solid purple;
+    // flex-direction: column;
+    #hero-intro {
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+    #graph {
+      flex-shrink: 0 !important;
+      flex-basis: 200px;
+    }
+  }
 }
 
 /* tablet breakpoints */
@@ -565,12 +612,17 @@ video {
       display: none;
     }
   }
-  .video {
+  .screenshot {
     border: 5px solid green;
     flex-direction: column;
     width: 100%;
-    video {
+
+    .screenshot-overlay-container {
       width: 100%;
+      height: auto;
+      img {
+        width: 100% !important;
+      }
     }
     .links {
       text-align: left;
@@ -591,10 +643,41 @@ video {
   #small-project__all-projects {
     grid-template-columns: 1fr;
   }
+  #hero-intro {
+    ul {
+      display: inline-block;
+      li {
+        margin-bottom: 1rem;
+        display: inline-block;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 500px) {
   #content {
     width: 95%;
+  }
+  #herocontainer {
+    gap: 1rem;
+    height: 85vh;
+  }
+  #hero-intro {
+    border: 1px solid yellow;
+    padding: 0px;
+    h1 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .screenshot {
+    width: 100% !important;
+    border: 1px solid red;
+    align-items: stretch;
+  }
+  .big-project__project {
+    padding: 0px;
   }
 }

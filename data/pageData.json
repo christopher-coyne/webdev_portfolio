@@ -1,7 +1,7 @@
 {
   "artBlurb": [
-    "During my education, one of the most influential classes I took was “Literature in the Age of AI” taught by professor <a href='www.google.com' class='secondary-text white-link'>Dennis Tenen</a>. My eyes were opened to the ways that computer science, philosophy, and art could intermix and I wanted to contribute in my own way. My final project for the class explored the universal language developed by philosopher John Wilkins, and sought to <a href='https://medium.com/@christcoyne/wilkins-and-the-universal-language-ccd14ac2179b'>recreate it using modern AI tools</a>.",
-    "I have always been passionate about the visual arts, and have an array of work you can check out <a href='www.google.com' class='secondary-text white-link'>here</a>. In the future, I hope to create pieces that combine art and computer science into something new."
+    "During my education, one of the most influential classes I took was “Literature in the Age of AI” taught by professor <a href='https://english.columbia.edu/content/dennis-tenen' target='_blank' class='secondary-text white-link'>Dennis Tenen</a>. My eyes were opened to the ways that computer science, philosophy, and art could intermix and I wanted to contribute in my own way. My final project for the class explored the universal language developed by philosopher John Wilkins, and sought to <a href='https://medium.com/@christcoyne/wilkins-and-the-universal-language-ccd14ac2179b' target='_blank' class='secondary-text white-link'>recreate it using modern AI tools</a>.",
+    "I have always been passionate about the visual arts, and have an array of work you can check out <a target='_blank' href='https://www.instagram.com/zahir_red/' class='secondary-text white-link'>here</a>. In the future, I hope to create pieces that combine art and computer science into something new."
   ],
   "artProjects": [
     {
@@ -22,32 +22,32 @@
       "links": [
         {
           "type": "Github",
-          "link": "www.google.com"
+          "link": "https://github.com/christopher-coyne/meaculpa"
         },
         {
           "type": "Live Site",
-          "link": "www.google.com"
+          "link": "https://meaculpa.netlify.app/"
         }
       ],
       "shortDescription": "Professor and course review site for Columbia university. Users can view 1000s of real, scraped reviews and submit their own. Data visualized using ChartJS.",
       "skills": ["React", "Docker", "PostgreSQL", "Beautiful Soup", "Node JS"],
-      "videoLink": "www.google.com"
+      "screenshot": "./culpa-screenshot copy.png"
     },
     {
       "name": "IMDB Chatbot",
       "links": [
         {
           "type": "Github",
-          "link": "www.google.com"
+          "link": "https://github.com/christopher-coyne/lexflix"
         },
         {
           "type": "Live Site",
-          "link": "www.google.com"
+          "link": "https://imdb-bot.netlify.app"
         }
       ],
       "shortDescription": "Chatbot powered by AWS services that recommends top movies from IMDB. Implemented with a CICD pipeline and AWS serverless design.",
       "skills": ["React", "Tailwind CSS", "AWS", "DynamoDB", "Serverless"],
-      "videoLink": "www.google.com"
+      "screenshot": "./imdb-screenshot copy.png"
     }
   ],
   "smallProjects": [
@@ -57,21 +57,21 @@
       "links": [
         {
           "type": "Github",
-          "link": "www.google.com"
+          "link": "https://github.com/christopher-coyne/recipe_finder"
         },
         {
           "type": "Live Site",
-          "link": "www.google.com"
+          "link": "https://recipe-finder-123.netlify.app"
         }
       ]
     },
     {
       "name": "Dev Portfolio",
-      "shortDescription": "You're looking at it. Software dev portfolio utilizing <span class='secondary-text'>EJS</span> and <span class='secondary-text'>GSAP</span> for animations. Hosted on AWS route 54 and EC2.",
+      "shortDescription": "You're looking at it. Software dev portfolio utilizing <span class='secondary-text'>EJS</span> and <span class='secondary-text'>GSAP</span> for animations. Hosted on Digital Ocean.",
       "links": [
         {
           "type": "Github",
-          "link": "www.google.com"
+          "link": "https://github.com/christopher-coyne/webdev_portfolio"
         }
       ]
     },
@@ -81,11 +81,11 @@
       "links": [
         {
           "type": "Github",
-          "link": "www.google.com"
+          "link": "https://github.com/christopher-coyne/to-do-list"
         },
         {
           "type": "Live Site",
-          "link": "www.google.com"
+          "link": "https://to-do-list-vanilla-123.netlify.app/"
         }
       ]
     }

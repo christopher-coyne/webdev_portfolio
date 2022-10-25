@@ -1,16 +1,3 @@
-console.log("hello world");
-
-const clips = document.querySelectorAll(".clip");
-for (let i = 0; i < clips.length; i++) {
-  clips[i].addEventListener("mouseenter", function (e) {
-    clips[i].play();
-  });
-  clips[i].addEventListener("mouseout", function (e) {
-    clips[i].pause();
-  });
-}
-
-const about = document.querySelector(".clip");
 function generateReport() {
   window.location.href = "#about";
 }
@@ -48,44 +35,29 @@ tl.to("#jk", { strokeDashoffset: 0, duration: 0.3 }); // 14
 tl.to("#circlej", { fill: "#E0FBFC", duration: 0.05 });
 tl.to("#be", { strokeDashoffset: 0, duration: 0.3 }); // 17
 tl.to("#circlee", { fill: "#E0FBFC", duration: 0.05 });
-console.log("tl : ", tl);
+
+gsap.from("#hero-title", {
+  opacity: 0,
+  duration: 1,
+});
+
+gsap.from("#hero-hr", {
+  opacity: 0,
+  duration: 1,
+});
+
+gsap.from("#hero-blurb", {
+  opacity: 0,
+  duration: 1,
+});
+
+let tlHero = gsap.timeline();
+tlHero.delay(0.25);
+tlHero.from("#hero-link-github", { y: -30, opacity: 0, duration: 0.3 });
+tlHero.from("#hero-link-linkedin", { y: -30, opacity: 0, duration: 0.3 });
+tlHero.from("#hero-link-resume", { y: -30, opacity: 0, duration: 0.3 });
 
 gsap.from("#graph", {
   opacity: 0,
-  y: 100,
   duration: 1,
 });
-gsap.from("#hero-intro", {
-  opacity: 0,
-  duration: 2,
-});
-
-gsap.from("#small-project", {
-  scrollTrigger: "#small-project", // start the animation when ".box" enters the viewport (once)
-  x: 500,
-});
-/*
-var video = document.querySelector(".video");
-var videoFiller = document.querySelector(".videoFiller");
-var gif = document.createElement("img");
-gif.src = "./videos/largescreentest.gif";
-
-video.addEventListener("mouseover", (event) => {
-  console.log("hovered!!!");
-  video.replaceChild(gif, videoFiller);
-});
-
-gif.addEventListener("mouseout", (event) => {
-  console.log("un hovered");
-  video.replaceChild(videoFiller, gif);
-});
-*/
-
-/*
-const myfreeze = new Freezeframe(".freezeframe", {
-  trigger: "hover",
-  overlay: false,
-});
-
-console.log("freeze frame : ", myfreeze);
-*/

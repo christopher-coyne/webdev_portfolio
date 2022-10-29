@@ -45,7 +45,7 @@
           "link": "https://imdb-bot.netlify.app"
         }
       ],
-      "shortDescription": "Chatbot powered by AWS services that recommends top movies from IMDB. Implemented with a CICD pipeline and AWS serverless design.",
+      "shortDescription": "Chatbot powered by AWS services that recommends top movies from IMDB. Implemented with a Nosql database and AWS serverless design.",
       "skills": ["React", "Tailwind CSS", "AWS", "DynamoDB", "Serverless"],
       "screenshot": "./imdb-screenshot copy.png"
     }
@@ -67,7 +67,7 @@
     },
     {
       "name": "Dev Portfolio",
-      "shortDescription": "You're looking at it. Software dev portfolio utilizing <span class='secondary-text'>EJS</span> and <span class='secondary-text'>GSAP</span> for animations. Hosted on Digital Ocean.",
+      "shortDescription": "You're looking at it. Software dev portfolio utilizing <span class='secondary-text'>EJS</span> and <span class='secondary-text'>GSAP</span> for animations. Hosted on Netlify.",
       "links": [
         {
           "type": "Github",

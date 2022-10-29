@@ -87,7 +87,6 @@ a:active {
 }
 
 // Section styling -------------------------->
-
 // Navbar styling
 nav {
   width: 100%;
@@ -144,19 +143,6 @@ nav {
 }
 
 #tech-skills {
-  /*
-  .skills {
-    ul {
-      list-style-type: none;
-      display: inline-block;
-      li {
-        display: inline-block;
-        color: $secondary;
-        margin-top: 0.5rem;
-      }
-    }
-  }
-  */
   li {
     margin-left: 0.5rem;
     ul {
@@ -295,13 +281,15 @@ h2 {
     // tech used
     ul {
       margin-top: 1rem;
-      padding: 0.5rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
+      // padding: 0.5rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
+      padding: 2% 5% 3% 5%;
       background-color: $primary-lighter;
       font-weight: $semi-bold;
       li {
         margin-top: 0.5rem;
         display: inline-block;
-        margin-right: 1.75rem;
+        // margin-right: 1.75rem;
+        margin-right: 6%;
       }
     }
   }
@@ -500,10 +488,6 @@ h2 {
   .screenshot {
     margin: auto;
   }
-  .screenshot-overlay-container {
-    height: 250px;
-    width: 900px;
-  }
   .screenshot-img {
     width: 100% !important;
     height: 100% !important;
@@ -654,6 +638,9 @@ h2 {
   .font-small-body {
     font-size: 16px !important;
   }
+  #hero-blurb {
+    font-size: 16px !important;
+  }
   #tech-skills {
     li {
       margin-bottom: 5px;
@@ -665,6 +652,9 @@ h2 {
         margin-right: 5px;
       }
     }
+  }
+  .main-break {
+    margin-bottom: 1rem;
   }
   #content {
     width: 95%;
@@ -681,7 +671,7 @@ h2 {
     padding: 2%;
   }
   .link-button {
-    padding: 0.5rem 0.7rem;
+    padding: 0.8rem 1rem;
     font-size: 14px;
   }
   .screenshot {
@@ -698,5 +688,11 @@ h2 {
   }
   .big-project__blurb::after {
     display: none;
+  }
+  #small-project {
+    h3 {
+      font-weight: $regular;
+      font-size: 16px;
+    }
   }
 }

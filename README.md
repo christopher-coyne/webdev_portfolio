@@ -8,5 +8,5 @@ Developer portfolio site for Christopher Coyne. Gsap for animations.
 
 # Set up
 
-npm install
+npm install \
 node index.js

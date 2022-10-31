@@ -278,20 +278,20 @@ h2 {
       padding: 1.5rem;
       background-color: $primary-lighter;
     }
-    // tech used
-    ul {
-      margin-top: 1rem;
-      // padding: 0.5rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
-      padding: 2% 5% 3% 5%;
-      background-color: $primary-lighter;
-      font-weight: $semi-bold;
-      li {
-        margin-top: 0.5rem;
-        display: inline-block;
-        // margin-right: 1.75rem;
-        margin-right: 6%;
-      }
-    }
+  }
+}
+
+.big-project__links {
+  margin-top: 1rem;
+  // padding: 0.5rem 1.5rem 1.5rem 1.5rem; // don't put padding on top, so li margin fills it up
+  padding: 2% 5% 3% 5%;
+  background-color: $primary-lighter;
+  font-weight: $semi-bold;
+  li {
+    margin-top: 0.5rem;
+    display: inline-block;
+    // margin-right: 1.75rem;
+    margin-right: 6%;
   }
 }
 
@@ -325,22 +325,23 @@ h2 {
   }
   .screenshot-overlay-container {
     position: relative;
-    padding: 0px !important;
-    margin: 0px !important;
+    padding: 0px;
+    margin: 0px;
     width: 500px;
-    img {
-      cursor: pointer;
-      width: 100%;
-      height: 100%;
-      margin: 0px !important;
-      padding: 0px !important;
-      border-radius: 5px;
-    }
 
     img:hover {
       box-shadow: 5px 5px 5px #232f3a;
     }
   }
+}
+
+.screenshot-img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
 }
 
 .img-container {
@@ -404,19 +405,6 @@ h2 {
 #art {
   article {
     padding: 1rem;
-    #quote {
-      font-family: "Merriweather";
-      font-style: italic;
-      display: inline-block;
-      font-weight: $light;
-      width: 95%;
-      background-color: $primary-lighter;
-      display: relative;
-      padding: 2rem;
-      font-size: 30px;
-      box-shadow: 20px 20px 1px 1px $primary-lightest;
-      margin-bottom: 4rem;
-    }
     #quote:hover {
       box-shadow: 20px 20px 1px 1px #18242c;
       // transform: translate(-10px, -10px);
@@ -428,6 +416,20 @@ h2 {
       margin-bottom: 1rem;
     }
   }
+}
+
+#quote {
+  font-family: "Merriweather";
+  font-style: italic;
+  display: inline-block;
+  font-weight: $light;
+  width: 95%;
+  background-color: $primary-lighter;
+  display: relative;
+  padding: 5%;
+  font-size: 30px;
+  box-shadow: 20px 20px 1px 1px $primary-lightest;
+  margin-bottom: 4rem;
 }
 
 #art-project {
@@ -489,8 +491,8 @@ h2 {
     margin: auto;
   }
   .screenshot-img {
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
     margin: auto;
     .links {
       a {
@@ -508,7 +510,7 @@ h2 {
   }
 
   #quote {
-    font-size: 24px !important;
+    font-size: 24px;
   }
   .big-project__project {
     flex-direction: column;
@@ -532,7 +534,7 @@ h2 {
       padding: 0px;
     }
     .big-project__links {
-      margin-top: 0px !important;
+      margin-top: 0px;
     }
   }
   #small-project__all-projects {
@@ -550,7 +552,7 @@ h2 {
       }
     }
     #graph {
-      flex-shrink: 0 !important;
+      flex-shrink: 0;
       flex-basis: 200px;
     }
   }
@@ -566,7 +568,7 @@ h2 {
     }
   }
   #quote {
-    font-size: 20px !important;
+    font-size: 20px;
   }
   .bulletpoint {
     display: none;
@@ -613,9 +615,6 @@ h2 {
       margin: 0px;
       padding: 0px;
     }
-    .big-project__links {
-      margin-top: 0px !important;
-    }
   }
   #small-project__all-projects {
     grid-template-columns: 1fr;
@@ -636,8 +635,9 @@ h2 {
     font-size: 20px;
   }
   .font-small-body {
-    font-size: 16px !important;
+    font-size: 16px;
   }
+  // use important to override font-body
   #hero-blurb {
     font-size: 16px !important;
   }
@@ -664,8 +664,7 @@ h2 {
     height: 85vh;
   }
   #quote {
-    font-size: 18px !important;
-    padding: 1rem !important;
+    font-size: 16px;
   }
   #hero-intro {
     padding: 2%;
@@ -675,11 +674,11 @@ h2 {
     font-size: 14px;
   }
   .screenshot {
-    width: 100% !important;
+    width: 100%;
     align-items: stretch;
     .links {
       a {
-        font-size: 18px !important;
+        font-size: 16px;
       }
     }
   }

@@ -54,11 +54,13 @@ gsap.from("#hero-blurb", {
   duration: 1,
 });
 
+/*
 let tlHero = gsap.timeline();
 tlHero.delay(0.25);
 tlHero.from("#hero-link-github", { y: -30, opacity: 0, duration: 0.3 });
 tlHero.from("#hero-link-linkedin", { y: -30, opacity: 0, duration: 0.3 });
 tlHero.from("#hero-link-resume", { y: -30, opacity: 0, duration: 0.3 });
+*/
 
 gsap.from("#graph", {
   opacity: 0,

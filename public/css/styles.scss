@@ -475,6 +475,52 @@ h2 {
   padding: 5rem;
 }
 
+#hero-link-github {
+  animation: comeDown 0.5s ease-out forwards;
+}
+
+#hero-link-linkedin {
+  animation: comeDown 0.5s ease-out forwards;
+}
+
+#hero-link-resume {
+  animation: comeDown 0.5s ease-out forwards;
+}
+
+@keyframes comeDown1 {
+  0% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes comeDown2 {
+  0% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+@keyframes comeDown3 {
+  0% {
+    transform: translateY(-60%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 /* Mid sized breakpoints */
 @media only screen and (max-width: 1000px) {
   #tech-skills {

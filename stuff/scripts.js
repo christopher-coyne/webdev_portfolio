@@ -2,6 +2,8 @@ function generateReport() {
   window.location.href = "#about";
 }
 
+console.log("here");
+
 /* gsap stuff */
 const test_path = document.querySelector("#ab");
 let tl = gsap.timeline();
@@ -53,7 +55,6 @@ gsap.from("#hero-blurb", {
 });
 
 let tlHero = gsap.timeline();
-console.log("gsp tl ", tlHero);
 tlHero.delay(0.25);
 tlHero.from("#hero-link-github", { y: -30, opacity: 0, duration: 0.3 });
 tlHero.from("#hero-link-linkedin", { y: -30, opacity: 0, duration: 0.3 });

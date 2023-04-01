@@ -12,31 +12,31 @@ tl.delay(1);
 tl.to("#starter", { strokeDashoffset: 0, duration: 0.5 }); // 2
 tl.to("#ac", { strokeDashoffset: 0, duration: 0.5 }); // 2
 tl.to("#circlec", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#ad", { strokeDashoffset: 0, duration: 0.5 }); // 4
+tl.to("#ad", { strokeDashoffset: 0, duration: 0.3 }); // 4
 tl.to("#circled", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#cg", { strokeDashoffset: 0, duration: 0.5 }); // 4
+tl.to("#cg", { strokeDashoffset: 0, duration: 0.3 }); // 4
 tl.to("#circleg", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#ch", { strokeDashoffset: 0, duration: 0.4 }); // 5
+tl.to("#ch", { strokeDashoffset: 0, duration: 0.3 }); // 5
 tl.to("#circleh", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#gl", { strokeDashoffset: 0, duration: 0.4 }); // 7
+tl.to("#gl", { strokeDashoffset: 0, duration: 0.3 }); // 7
 tl.to("#circlel", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#di", { strokeDashoffset: 0, duration: 0.4 }); // 7
+tl.to("#di", { strokeDashoffset: 0, duration: 0.3 }); // 7
 tl.to("#circlei", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#ab", { strokeDashoffset: 0, duration: 0.4 }); // 8
+tl.to("#ab", { strokeDashoffset: 0, duration: 0.3 }); // 8
 tl.to("#circleb", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#lo", { strokeDashoffset: 0, duration: 0.4 }); // 9
+tl.to("#lo", { strokeDashoffset: 0, duration: 0.3 }); // 9
 tl.to("#circleo", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#bf", { strokeDashoffset: 0, duration: 0.4 }); // 9
+tl.to("#bf", { strokeDashoffset: 0, duration: 0.3 }); // 9
 tl.to("#circlef", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#im", { strokeDashoffset: 0, duration: 0.4 }); // 9
+tl.to("#im", { strokeDashoffset: 0, duration: 0.3 }); // 9
 tl.to("#circlem", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#kl", { strokeDashoffset: 0, duration: 0.4 }); // 10
+tl.to("#kl", { strokeDashoffset: 0, duration: 0.3 }); // 10
 tl.to("#circlek", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#no", { strokeDashoffset: 0, duration: 0.4 }); // 12
+tl.to("#no", { strokeDashoffset: 0, duration: 0.3 }); // 12
 tl.to("#circlen", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#jk", { strokeDashoffset: 0, duration: 0.4 }); // 14
+tl.to("#jk", { strokeDashoffset: 0, duration: 0.3 }); // 14
 tl.to("#circlej", { fill: "#E0FBFC", duration: 0.1 });
-tl.to("#be", { strokeDashoffset: 0, duration: 0.4 }); // 17
+tl.to("#be", { strokeDashoffset: 0, duration: 0.3 }); // 17
 tl.to("#circlee", { fill: "#E0FBFC", duration: 0.1 });
 
 gsap.from("#hero-title", {

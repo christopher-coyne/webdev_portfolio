@@ -2,9 +2,9 @@
 
 Developer portfolio site for Christopher Coyne. Gsap for animations.
 
-# Screenshots
+# Live link
 
-![screenshot of website](./appScreenshot.png)
+www.chriscoynedev.com
 
 # Set up
 

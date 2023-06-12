@@ -8,5 +8,5 @@ Developer portfolio site for Christopher Coyne. Gsap for animations.
 
 # Set up
 
-npm install \
-node index.js
+To compile the scss:
+sass styles.scss styles.css

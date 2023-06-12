@@ -5,6 +5,7 @@ function generateReport() {
 console.log("here");
 
 /* gsap stuff */
+/*
 const test_path = document.querySelector("#ab");
 let tl = gsap.timeline();
 console.log("tl ", tl);
@@ -38,6 +39,7 @@ tl.to("#jk", { strokeDashoffset: 0, duration: 0.3 }); // 14
 tl.to("#circlej", { fill: "#E0FBFC", duration: 0.1 });
 tl.to("#be", { strokeDashoffset: 0, duration: 0.3 }); // 17
 tl.to("#circlee", { fill: "#E0FBFC", duration: 0.1 });
+*/
 
 gsap.from("#hero-title", {
   opacity: 0,
@@ -54,6 +56,11 @@ gsap.from("#hero-blurb", {
   duration: 1,
 });
 
+gsap.from("#profile_pic_container", {
+  opacity: 0,
+  duration: 1,
+});
+
 /*
 let tlHero = gsap.timeline();
 tlHero.delay(0.25);
@@ -62,7 +69,9 @@ tlHero.from("#hero-link-linkedin", { y: -30, opacity: 0, duration: 0.3 });
 tlHero.from("#hero-link-resume", { y: -30, opacity: 0, duration: 0.3 });
 */
 
+/*
 gsap.from("#graph", {
   opacity: 0,
   duration: 1,
 });
+*/

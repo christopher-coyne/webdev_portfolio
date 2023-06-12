@@ -207,9 +207,6 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 10%;
-  #graph {
-    flex: 0 0 25%;
-  }
 }
 
 #hero-intro {
@@ -260,11 +257,6 @@ h2 {
   #herocontainer {
     flex-direction: column;
     justify-content: center;
-    /*
-    #graph {
-      margin-top: 2rem;
-    }
-    */
     margin-bottom: 0px;
   }
   #profile_pic_container {
@@ -632,10 +624,6 @@ h2 {
       p {
         font-size: 20px;
       }
-    }
-    #graph {
-      flex-shrink: 0;
-      flex-basis: 200px;
     }
   }
 }
